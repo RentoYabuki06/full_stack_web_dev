@@ -1,0 +1,12 @@
+services:
+  app-db:                                       # 連想配列形式でサービス名を指定
+    image: mysql:8
+    command:                                    # コマンドはリスト（シーケンス）形式で指定
+      - --collation-server=utf8mb4_0900_bin     # 文字コードの設定
+      - --transaction-isolation=READ-COMMITTED  # トランザクションの分離レベル
+    restart: always                             # コンテナが停止した際は常に再起動
+    environment:                                # 環境変数の設定
+      MYSQL_ROOT_PASSWORD: password             # rootのパスワードはpassword
+      TZ: Asia/Tokyo                            # タイムゾーンは東京
+    ports:
+      - 53306:3306                              # ポートは53306を使用
