@@ -1,5 +1,6 @@
 # full_stack_web_dev
 
+<pre>
 .
 ├── README.md
 ├── dev
@@ -31,3 +32,4 @@
     │   └── sales_data.csv
     └── command
         └── command.txt
+</pre>
